@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Enrolados</title>
+    <link rel="shortcut icon" type="imagem/png" href="../img/imagem.png"/>
+    <!-- Importar o CSS do Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+      .rosa{
+        background-color: rgb(222, 124, 227);
+      }
+    </style>
+    <style>
+      html,body{
+        min-height: 100vh;
+        display:flex;
+        flex-direction: column;
+        margin: 0;
+
+      }
+      main{
+        flex: 1;
+      }
+      footer{
+        width: 100%;
+      }
+    </style>
+    
+</head>
+<body class="bg-success-subtle">
+    <header>
+        <nav class="navbar navbar-expand-lg rosa p-3">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light" href="../index.html">
+                <img src="../img/imagem.png" alt="" width="30" height="24">
+                Enrolados</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">                
+                  <li class="nav-item">
+                    <a type="button" class="btn btn-outline-light" href="Produtos.html">Produtos</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a type="button" class="btn btn-outline-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="Contatos.html">Contatos</a></li>
+                      <li><a class="dropdown-item" href="#">Em breve</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Em breve</a></li>
+                    </ul>
+                  </li>                 
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+        <script src="../js/script.js"></script>
+   <main>
+
+
+      <h1 class="text-center mt-4">Minha Loja Virtual</h1>
+      <div class="container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Imagem</th>
+              <th>Produto</th>
+              <th>Preço Unitário</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../img/produtos/boneca.png" alt="boneca" width="200"></td>
+              <td>
+                <div>Boneca</div>
+                <div>Tamanho: 21 ½ cm</div>
+                <div>Cor: Por ser um produto artesanal pode ter variações na cor, tamanho ou acabamento.</div>
+              </td>
+              <td id="preco_1">140.00</td>
+              <td>
+                <input type="number" id="qtd_1" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_1">R$ 0,00</td>
+            </tr>
+
+            <tr>
+              <td><img src="../img/produtos/colar.png" alt="colar" width="200"></td>
+              <td>
+                <div>Colar</div>
+                <div>Material: Aço Inox</div>
+                <div>Tamanho da corrente: 50 CM</div>
+                <div>Tamanho do pingente: 4 CM</div>
+              </td>
+              <td id="preco_2">50.00</td>
+              <td>
+                <input type="number" id="qtd_2" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_2">R$ 0,00</td>
+            </tr>
+
+            <tr>
+              <td><img src="../img/produtos/luminaria.png" alt="colar" width="200"></td>
+              <td>
+                <div>Luminária</div>
+                <div>Iluminação- Fio de led com pilhas</div>
+                <div>Decoração- Pingentes de acordo com o tema</div>
+              </td>
+              <td id="preco_2">160.00</td>
+              <td>
+                <input type="number" id="qtd_2" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_2">R$ 0,00</td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+        <div class="text-end">
+          <h4>Total Geral: <span id="total_geral">R$ 0,00</span></h4>
+        </div>
+      </div>
+    
+  </main>   
+    
+    <footer class="text-muted bg-lith">
+      <di>
+        <p class="p-3 y-0 text-center container-fluid">&copy; Maria Clara 2025</p>
+      </div>
+
+    </footer>
+    <!-- Importar o JS do Bootstrap e dependências -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
